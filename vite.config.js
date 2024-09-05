@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/backend': {
-        target: 'https://event-scheduler-server.vercel.app/',
+        target: 'https://event-scheduler-server.vercel.app',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/backend/, ''),
       },

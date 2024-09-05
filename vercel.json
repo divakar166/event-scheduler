@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/backend/:path*",
+      "destination": "https://event-scheduler-server.vercel.app/:path*"
+    },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
