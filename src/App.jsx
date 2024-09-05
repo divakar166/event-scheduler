@@ -19,7 +19,7 @@ const App = () => {
       setError(null);
 
       try {
-        const response = await fetch(`http://localhost:3000/api/events/date/${selectedDate}`);
+        const response = await fetch(`/backend/api/events/date/${selectedDate}`);
         if (!response.ok) {
           throw new Error('Failed to fetch events');
         }
@@ -47,7 +47,6 @@ const App = () => {
   const handleDateChange = (newDate) => {
     const formattedDate = newDate.toLocaleDateString('en-CA');
     setSelectedDate(formattedDate);
-    console.log(formattedDate)
   };
   const handleEventChange = () => {
     setRefreshKey(prevKey => prevKey + 1); 

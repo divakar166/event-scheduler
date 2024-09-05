@@ -19,7 +19,7 @@ const EventList = ({ events, loading, error, selectedDate, handleEventChange }) 
   };
   const handleSave = async (event) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/events/${event.id}`, {
+      const response = await fetch(`/backend/api/events/${event.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const EventList = ({ events, loading, error, selectedDate, handleEventChange }) 
   };
   const handleDelete = async (eventId) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/events/${eventId}`, {
+      const response = await fetch(`/backend/api/events/${eventId}`, {
         method: 'DELETE',
       });
       if (!response.ok) throw new Error('Failed to delete event');
