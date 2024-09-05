@@ -24,7 +24,7 @@ const AddEventModal = ({ isOpen, onClose, initialDate, handleEventChange }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/backend/api/events/', {
+      const response = await fetch(`/backend/api/events/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
